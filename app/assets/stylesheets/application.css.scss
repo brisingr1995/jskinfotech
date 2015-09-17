@@ -190,6 +190,13 @@ input[type="submit"], .button {
 	text-align: center;
 }
 
+#map{
+	width: 50%;
+	margin: 0 auto;
+	height: 300px;
+	background: red;
+}
+
 @import 'welcome';
 @import 'posts_projects';
 @import 'pygments';

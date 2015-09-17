@@ -1,6 +1,11 @@
 <h1 id="page_title">Say Hello!</h1>
 
 <div class="skinny_wrapper wrapper_padding">
+	<script>markers = handler.addMarkers(<%=raw @hash.to_json %>);</script>
+	<div id="map">
+		
+	</div>
+
 	<%= form_for @contact do |f| %>
 		<%= f.label :name %><br>
 		<%= f.text_field :name, required: true %>
@@ -22,4 +27,7 @@
 
 		<%= f.submit 'Send Message', class: "button" %>
 	<% end %>
+
+
 </div>
+
