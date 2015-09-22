@@ -10,6 +10,5 @@ class Contact < MailForm::Base
 	  	:to => "lionelcd94@gmail.com",
 	  	:from => %("#{name}" <#{email}>)
 	  }
-	end
-	
+	en	
 end
