@@ -196,6 +196,11 @@ input[type="submit"], .button {
 	height: 300px;
 }
 
+.project_image{
+	display: block;
+	margin: 1em auto;
+}
+
 @import 'welcome';
 @import 'posts_projects';
 @import 'pygments';

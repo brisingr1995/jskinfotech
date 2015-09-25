@@ -2,10 +2,13 @@
 	<header>
 		<p class="date"><%= @project.created_at.strftime('%A, %B %d') %></p>
 		<h1><%= @project.title %></h1>
+
 		<hr>
 	</header>
 
 	<div id="content">
+		<%= image_tag @project.image.url(:large), class: "project_image" %>
+
 		<%= markdown @project.description %>
 
 		<div class="button_wrapper">
