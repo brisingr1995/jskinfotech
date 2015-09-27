@@ -112,14 +112,13 @@ hr {
 	nav {
 		float: right;
 		padding-top: 1.5rem;
-		a {
-			color: $dark;
-			text-decoration: none;
-			margin: 0 1rem;
-			font-size: 1rem;
-		}
 	}
 }
+
+.course-down:hover ~ .dropdown{
+		display: table;
+}
+
 
 #page_title {
 	text-align: center;
@@ -200,6 +199,58 @@ input[type="submit"], .button {
 	display: block;
 	margin: 1em auto;
 }
+
+//--------------------------------
+
+ul{
+	list-style: none;
+	padding: 0px;
+	margin: 0px;
+}
+ul li{
+	display: block;
+	position: relative;
+	float: left;
+}
+li ul{
+	display: none;
+}
+ul li a{
+	display: block;
+	background: #000;
+	padding: 5px 10px 5px 10px;
+	text-decoration: none;
+  white-space: nowrap;
+  color: #fff;
+}
+ul li a:hover{
+	background: $highlight;
+}
+li:hover ul{
+	display: block; 
+	position: absolute;
+}
+li:hover li {
+	float: none;
+}
+li:hover a {
+	background: $highlight;
+}
+li:hover li a:hover {
+	background: #000;
+}
+#drop-nav li ul li {
+	border-top: 0px;
+}
+
+.course-down{
+	color: $dark;
+	text-decoration: none;
+	margin: 0 1rem;
+	font-size: 1rem;
+}
+
+
 
 @import 'welcome';
 @import 'posts_projects';

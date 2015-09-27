@@ -1,5 +1,7 @@
 class ApplicationController < ActionController::Base
-  def application
+  before_action :build_posts_list
+
+  def build_posts_list
   	@posts = Post.all
   end
 

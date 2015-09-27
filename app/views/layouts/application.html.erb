@@ -14,21 +14,27 @@
 	<header id="main_navigation" class="clearfix">
 		<%= link_to "JSK Infotech", root_path, class: "name" %>
 		<nav>
-			<%= link_to "Courses", posts_path %>
-				<!-- <div id="posts_wrapper" class="skinny_wrapper">
-					 <--% @posts.each do |post| %>
-						<div class="post">
-							<p class="date"><--%= post.created_at.strftime('%A, %B %d') %></p>
-							<h2><a href="#"><--%= link_to post.title, post %></a></h2>
-							<hr>
-						</div>
-					 <--% end %>
-				</div> -->
-			<%= link_to "Projects", projects_path %>
-			<%= link_to "Contact", new_contact_path %>
-			<% if user_signed_in? %>
-				<%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
-			<% end %>
+			<ul id="drop-nav">
+			  <li><%= link_to "Courses", posts_path %>
+			    <ul>
+		       <% @posts.each do |post| %>
+		      		<li><%= link_to post.title, post %></li>
+		      		<hr>
+		       <% end %>
+			    </ul>
+			  </li>
+			  <li>
+			  	<%= link_to "Projects", projects_path %>
+			  </li>
+			  <li>
+			  	<%= link_to "Contact", new_contact_path %>
+			  	</li>
+			  <li>
+			  	<% if user_signed_in? %>
+			  		<%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
+			  	<% end %>
+			  </li>
+			</ul>
 		</nav>
 	</header>
 
