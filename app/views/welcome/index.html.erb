@@ -12,14 +12,6 @@
 		 
 		<p>JSK INFOTECH (CAD/CAM/BIM TRAINING CENTER) is an Autodesk ATC and ACC leverages experience and expertise gathered by us over the couple of years to provide high quality and professional training on CAD/CAM/CAE and BIM Products and Technology.</p>
 	</div>
-	<div class="col-2 homepage_content">
-		<h2>Courses</h2>
-		<hr>
-		<% @posts.each do |post| %>
-			<h3><a href="#"><%= link_to post.title, post %></a></h3>
-			<p class="date"><%= post.created_at.strftime("%A, %b %d") %></p>
-		<% end %>
-	</div>
 	<div class="col-3 homepage_content">
 		<h2>Stuff We've Built</h2>
 		<hr>
