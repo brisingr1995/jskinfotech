@@ -15,3 +15,10 @@
 //= require turbolinks
 //= require underscore
 //= require_tree .
+
+window.addEventListener("load", function(){
+	setInterval(function(){
+		var load_screen = document.getElementById("loader-wrapper");
+		document.body.removeChild(load_screen);	
+	}, 5000);
+});
